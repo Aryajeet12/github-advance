@@ -24,7 +24,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
 
-      # ✅ TEMP: skip real tests (so CI passes)
+      # TEMP: skip real tests
       - name: Run tests
         run: |
           echo "Tests passed"
@@ -75,4 +75,5 @@ jobs:
         run: |
           echo "Deploying to PROD"
           mkdir -p prod-release
-          tar -xzf app.tar.gz -C prod
+          tar -xzf app.tar.gz -C prod-release
+
